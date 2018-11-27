@@ -13,7 +13,7 @@ class TurnTest < Minitest::Test
 
    turn = Turn.new("Juneau",card)
 
-   assert_instance_of Card, card
+   assert_instance_of Turn, turn
   end
 
 def test_the_guess_is_the_initialized_string
