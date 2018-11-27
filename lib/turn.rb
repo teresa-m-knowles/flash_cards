@@ -1,29 +1,33 @@
+require './lib/card.rb'
+
 class Turn
 
-  def initialize(string, Card)
-    @string = string
-    @Card = Card
-  end
+attr_accessor :string, :card
 
-  def guess
-    @string
-  end
+def initialize(string, card)
+  @string = string
+  @card = card
+end
 
-  def card
-    @Card
-  end
+def guess
+  @string
+end
 
-  def correct?
-    @Card.answer == @string
-  end
+def card
+  @card
+end
 
-  def feedback
-    if self.correct? ==true
-      'Correct!'
-    else
-      'Incorrect!'
-    end
+def correct?
+  @card.answer == self.guess
+end
+
+def feedback
+  if self.correct? == true
+    'Correct!'
+  else
+    'Incorrect!'
   end
+end 
 
 
 end
