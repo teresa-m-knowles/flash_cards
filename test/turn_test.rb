@@ -51,9 +51,10 @@ def test_it_provides_correct_feedback
   turn = Turn.new("Mercury", card)
   turn2 =Turn.new("Saturn", card)
 
-  assert_equal "Correct!", turn.feedback
-  assert_equal "Incorrect!", turn2.feedback
-  binding.pry
+  correct = "Correct!"
+  incorrect = "Incorrect!"
+  assert_equal correct, turn.feedback
+  assert_equal incorrect, turn2.feedback
 end
 
 
