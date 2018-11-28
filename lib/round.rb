@@ -4,18 +4,19 @@ require './lib/turn'
 
 class Round
 
-  attr_accessor :deck, :current_card, :turn
+  attr_accessor :deck, :current_card, :turns
 
   def initialize(deck)
     @deck = deck
-    @turn = []
+    @turns = []
   end
 
    def take_turn(string)
 
-     @new_turn = Turn.new(string, self.current_card)
-     # self.move_to_next_card
-     # @new_turn
+     new_turn = Turn.new(string, self.current_card)
+     @turns << new_turn
+     deck.cards.rotate
+     new_turn
 
 
 
