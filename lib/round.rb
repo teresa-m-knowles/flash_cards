@@ -9,6 +9,7 @@ class Round
   def initialize(deck)
     @deck = deck
     @turns = []
+    @number_correct_counter = 0
   end
 
    def take_turn(string)
@@ -26,7 +27,13 @@ class Round
      deck.cards[0]
    end
 
-
+   def number_correct
+     @turns.each do |element_of_turn_array|
+       if element_of_turn_array.correct? == true
+         @number_correct_counter += 1
+       end 
+     end
+   end
 
 
 
