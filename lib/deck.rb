@@ -7,6 +7,7 @@ attr_accessor :cards
     @cards = cards
   end
 
+   
   def count
     @cards.count
   end

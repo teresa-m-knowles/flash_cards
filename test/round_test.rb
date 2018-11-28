@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/card'
 require './lib/deck'
+require './lib/round'
 
 require 'pry'
 
@@ -15,9 +16,15 @@ class RoundTest < MiniTest::Test
     cards = [card_1, card_2, card_3]
 
     deck = Deck.new(cards)
+    round = Round.new(deck)
 
-    assert_instance_of Deck, deck
+    assert_instance_of Round, round
+
+    binding.pry
 
   end
+
+  # def test_it_)
+  # end
 
 end

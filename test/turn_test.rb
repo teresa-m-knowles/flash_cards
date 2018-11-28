@@ -8,13 +8,13 @@ require 'pry'
 
 class TurnTest < Minitest::Test
 
- def test_it_exists
+def test_it_exists
    card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
 
    turn = Turn.new("Juneau",card)
 
    assert_instance_of Turn, turn
-  end
+end
 
 def test_the_guess_is_the_initialized_string
   card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
@@ -30,6 +30,7 @@ def test_it_can_compare_guess_and_card_answer
   turn = Turn.new("Juneau",card)
 
   assert_equal card.answer, turn.guess
+
 
   turn2 = Turn.new("Denver", card)
 
