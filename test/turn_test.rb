@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/turn.rb'
+require './lib/turn'
+require './lib/card'
 
 require 'pry'
 
