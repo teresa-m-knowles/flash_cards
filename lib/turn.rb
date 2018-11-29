@@ -1,4 +1,4 @@
-require './lib/card.rb'
+
 
 class Turn
 
@@ -13,9 +13,7 @@ def guess
   @string
 end
 
-def card
-  @card
-end
+
 
 def correct?
   @card.answer == self.guess
@@ -27,7 +25,7 @@ def feedback
   else
     'Incorrect!'
   end
-end 
+end
 
 
 end
