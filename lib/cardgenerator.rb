@@ -17,7 +17,7 @@ class CardGenerator
       new_card = Card.new(card[0], card[1], card[2])
       @cards << new_card
     end
-    @cards
+    Deck.new(@cards)
   end
 
 
