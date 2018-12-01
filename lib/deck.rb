@@ -1,7 +1,6 @@
-require './lib/card'
 
 class Deck
-attr_accessor :cards
+attr_reader :cards
 
   def initialize(cards)
     @cards = cards
@@ -14,7 +13,6 @@ attr_accessor :cards
 
   def cards_in_category(category)
      @cards.select{ |card| card.category == category}
-     
   end
 
 end
