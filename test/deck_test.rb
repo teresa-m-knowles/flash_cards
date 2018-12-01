@@ -17,7 +17,7 @@ class DeckTest < MiniTest::Test
     deck = Deck.new(cards)
 
     assert_instance_of Deck, deck
-    refute cards.empty?
+
   end
 
   def test_it_can_count_the_cards_in_deck
@@ -44,19 +44,10 @@ class DeckTest < MiniTest::Test
 
 
     assert_equal expected_stem_array, deck.cards_in_category(:STEM)
-  end
-
-  def test_that_if_there_are_no_cards_in_a_given_category_the_array_is_empty
-
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-    card_2 = Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM)
-    card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
-
-    cards = [card_1, card_2, card_3]
-    deck = Deck.new(cards)
-
     assert_empty deck.cards_in_category(:Pop)
   end
+
+
 
 
 

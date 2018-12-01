@@ -45,6 +45,8 @@ def test_it_returns_true_if_card_answer_matches_turn_guess
 
   assert turn.correct?
 
+  #add refute 
+
 end
 
 def test_it_provides_correct_feedback
