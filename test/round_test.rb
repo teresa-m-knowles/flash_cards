@@ -31,7 +31,7 @@ class RoundTest < MiniTest::Test
     deck = Deck.new(cards)
     round = Round.new(deck)
 
-    assert_equal round.deck, deck
+    assert_equal deck, round.deck
   end
 
   def test_a_new_round_object_has_an_empty_turns_array_when_initialized
@@ -56,7 +56,7 @@ class RoundTest < MiniTest::Test
     deck = Deck.new(cards)
     round = Round.new(deck)
 
-    assert_equal cards[0], round.current_card
+    assert_equal card_1, round.current_card
   end
 
   def test_that_it_can_take_a_turn
@@ -73,6 +73,10 @@ class RoundTest < MiniTest::Test
     assert_instance_of Turn, new_turn
 
     assert_equal new_turn.class, Turn
+    #assertion that it's the turn that corresponds to the card
+
+    assert_equal card_1, new_turn.card
+    assert_equal "Juneau", new_turn.guess
 
   end
 
@@ -173,11 +177,14 @@ def test_it_can_count_turns_and_get_feedback_from_turn
 
     assert_equal 0, round.number_correct_by_category(:STEM)
 
+    #create tests for percent category and percent
+    #if 2/3 are correct? float?
+
     assert_equal 50, round.percent_correct
 
     assert_equal 100,  round.percent_correct_by_category(:Geography)
 
-    assert_equal cards[2], round.current_card
+    assert_equal card_3, round.current_card
 
 
   end
