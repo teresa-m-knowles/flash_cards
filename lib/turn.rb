@@ -11,7 +11,7 @@ end
 
 
 def correct?
-  card.answer == guess
+  card.answer.upcase == guess.upcase
 end
 
 def feedback
