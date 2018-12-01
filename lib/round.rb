@@ -81,7 +81,7 @@ until turns_counter ==  (deck.cards.count + 1)   do
 
   puts "This is card #{turns_counter} out of #{deck.cards.count}"
   puts "Question: #{current_card.question}"
-  answer = gets.chomp
+  answer = gets.chomp.upcase
   puts take_turn(answer).feedback
   turns_counter += 1
 end
