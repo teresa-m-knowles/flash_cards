@@ -45,6 +45,13 @@ def number_correct_by_category(category)
   end
 end
 
+# def number_correct_by_category(category)
+#   @deck.cards_in_category(category)
+#   @turns.count do |each_turn|
+#     each_turn.correct?
+#   end
+
+
 def percent_correct
    answer = (number_correct.to_f / @turns.size) * 100.0
    answer.round(2)
@@ -96,6 +103,5 @@ question_categories = deck.cards.uniq { |card| card.category }
   puts "#{each_category.category} - #{percent_correct_by_category(each_category.category)}% correct."
 end
 end
-
 
 end
