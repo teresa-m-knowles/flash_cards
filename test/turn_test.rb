@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/turn.rb'
+require './lib/turn'
+require './lib/card'
 
 require 'pry'
 
@@ -43,6 +44,8 @@ def test_it_returns_true_if_card_answer_matches_turn_guess
   turn = Turn.new("Juneau",card)
 
   assert turn.correct?
+
+  #add refute 
 
 end
 
