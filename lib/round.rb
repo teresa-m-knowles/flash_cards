@@ -26,16 +26,22 @@ class Round
      @deck.cards[0]
    end
 
+   # def number_correct
+   #   number_correct = 0
+   #   @turns.each do |each_turn|
+   #     if each_turn.correct? == true
+   #       number_correct += 1
+   #     end #ends if
+   #   end #ends each block
+   #
+   #   number_correct #returns counter
+   #
+   # end
+
    def number_correct
-     number_correct = 0
-     @turns.each do |each_turn|
-       if each_turn.correct? == true
-         number_correct += 1
-       end #ends if
-     end #ends each block
-
-     number_correct #returns counter
-
+     turns.count do |each_turn|
+       each_turn.correct?
+     end
    end
 
 
